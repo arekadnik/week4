@@ -6,11 +6,18 @@
 </head>
 <body>
 <h1>Kurs Spring!</h1>
-<p>Hello World</p>
 <tr th:each="car: ${cars}">
     <td th:text="${car.getModel()}"></td>
-    <td th:text="${car.getMark()}"></td><br>
+    <td th:text="${car.getMark()}"></td>
+    <br>
     <p>===================</p>
 </tr>
+
+<form th:action="@{/add-car}" th:object="${newCar}" method="post">
+    <p>Model: <input type="text" th:field="*{model}"></p>
+    <p>Mark: <input type="text" th:field="*{mark}"></p>
+    <p><input type="submit" value="add new car"></p>
+</form>
+
 </body>
 </html>

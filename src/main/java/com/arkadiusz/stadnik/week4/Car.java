@@ -1,6 +1,8 @@
 package com.arkadiusz.stadnik.week4;
 
 public class Car {
+
+
     private String model;
     private String mark;
 
@@ -26,6 +28,13 @@ public class Car {
 
     public void setMark(String mark) {
         this.mark = mark;
+    }
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model='" + model + '\'' +
+                ", mark='" + mark + '\'' +
+                '}';
     }
 
 }
